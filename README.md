@@ -1,2 +1,0 @@
-# ImageSearchApp
-This is a mobile Android Application design with Kotlin for lerning porpouses and for searching images on the internet for a mobile device. The App is built in Kotlin using the retrofit library to communicate with the unsplash API. It also uses Navigation Components, View Binding, Dagger Hilt for dependency injection, Glide and Paging 3. This App has been built for learning purposes.
