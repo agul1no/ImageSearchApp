@@ -2,7 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id("dagger.hilt.android.plugin")
-
+    id 'com.google.secrets_gradle_plugin' version '0.4'
 }
 
 apply plugin: "kotlin-kapt"
@@ -20,8 +20,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        buildConfigField("String", "UNSPLASH_ACCESS_KEY", unsplash_access_key)
     }
 
     buildTypes {
