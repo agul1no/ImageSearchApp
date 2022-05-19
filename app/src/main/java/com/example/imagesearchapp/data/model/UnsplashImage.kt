@@ -1,4 +1,4 @@
-package com.example.imagesearchapp.model
+package com.example.imagesearchapp.data.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

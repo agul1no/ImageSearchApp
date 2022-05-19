@@ -1,4 +1,4 @@
-package com.example.imagesearchapp.api
+package com.example.imagesearchapp.data.remote.api
 
 import com.example.imagesearchapp.util.ApiKey
 import retrofit2.http.GET
