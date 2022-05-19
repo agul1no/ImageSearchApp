@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Acer R2G/AndroidStudioProjects/ImageSearchApp/app/src/main/res/drawable/gradiant_bottom_image.xml" value="0.369" />
         <entry key="..\:/Users/Acer R2G/AndroidStudioProjects/ImageSearchApp/app/src/main/res/layout/activity_main.xml" value="0.440625" />
+        <entry key="..\:/Users/Acer R2G/AndroidStudioProjects/ImageSearchApp/app/src/main/res/layout/fragment_gallery.xml" value="0.42916666666666664" />
+        <entry key="..\:/Users/Acer R2G/AndroidStudioProjects/ImageSearchApp/app/src/main/res/layout/item_unsplash_image.xml" value="0.42916666666666664" />
       </map>
     </option>
   </component>
