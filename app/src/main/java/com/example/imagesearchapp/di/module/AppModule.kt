@@ -1,4 +1,4 @@
-package com.example.imagesearchapp.di
+package com.example.imagesearchapp.di.module
 
 import com.example.imagesearchapp.data.remote.api.UnsplashApi
 import dagger.Module
@@ -22,6 +22,7 @@ object AppModule {
             .build()
 
     @Provides
+    @Singleton
     fun provideUnsplashApi(retrofit: Retrofit): UnsplashApi =
         retrofit.create(UnsplashApi::class.java)
 }

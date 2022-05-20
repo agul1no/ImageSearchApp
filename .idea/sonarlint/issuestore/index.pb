@@ -24,9 +24,17 @@ A
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 k
 ;app/src/main/java/com/example/imagesearchapp/util/ApiKey.kt,9\f\9f0f61bae0a34b9e5eac6745d28949ef57fc135e
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+x
+Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65
+w
+Gapp/src/main/java/com/example/imagesearchapp/data/model/ProfileImage.kt,f\8\f87d525414ff1f4eba9f9892e44c0697867fd1bc
+|
+Lapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashImageUrls.kt,d\1\d1735dac3b1e39ae69eda2fa12bb40d7c545209c
+w
+Gapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashUser.kt,3\a\3acebd41fdc9292b6b3bae73bac9582defc49338
+€
+Papp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashResponse.kt,e\e\ee4765c1f4fafac0bdb8b294efb9cf04d07034ec
+{
+Kapp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashApi.kt,7\1\7111ff1c9f685ce2a28676be48f7826031dcd7c9
