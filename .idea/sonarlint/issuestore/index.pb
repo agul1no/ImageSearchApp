@@ -42,3 +42,9 @@ v
 Fapp/src/main/java/com/example/imagesearchapp/ImageSearchApplication.kt,5\7\576457ecb77cfebc007daf726714ccffd6795a4a
 {
 Kapp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashApi.kt,7\1\7111ff1c9f685ce2a28676be48f7826031dcd7c9
+A
+gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
+s
+Capp/src/main/java/com/example/imagesearchapp/di/module/AppModule.kt,6\d\6d0efaa49b281c6a58d5405b197e7f931e8cbffc
+x
+Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65

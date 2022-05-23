@@ -1,13 +1,15 @@
 package com.example.imagesearchapp.ui.galleryfragment
 
+import android.content.Context
 import android.os.Bundle
+import android.view.*
+import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.example.imagesearchapp.R
 import com.example.imagesearchapp.databinding.FragmentGalleryBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -44,6 +46,8 @@ class GalleryFragment : Fragment() {
             adapter.submitData(viewLifecycleOwner.lifecycle, it)
         })
 
+        setHasOptionsMenu(true)
+
         return binding.root
     }
 
@@ -57,4 +61,36 @@ class GalleryFragment : Fragment() {
         return adapter
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+
+        inflater.inflate(R.menu.search_menu_gallery, menu)
+
+        val searchItem = menu.findItem(R.id.action_search)
+        val searchView = searchItem.actionView as SearchView
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                if (query?.isEmpty() == true){
+                    binding.tvNoQuery.visibility = View.VISIBLE
+                }
+                if (query?.isNotEmpty() == true){
+                    binding.rvGallery.scrollToPosition(0)
+                    viewModel.searchImages(query.toString())
+                    binding.tvNoQuery.visibility = View.GONE
+                    searchView.clearFocus()
+                }
+                return true
+            }
+            override fun onQueryTextChange(query: String?): Boolean {
+                return true
+            }
+
+        })
+    }
+
+    fun View.hideKeyboard() {
+        val inputMethodManager = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(windowToken, 0)
+    }
 }
