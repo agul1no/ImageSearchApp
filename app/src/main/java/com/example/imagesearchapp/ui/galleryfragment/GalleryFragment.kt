@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -34,10 +35,12 @@ class GalleryFragment : Fragment() {
     ): View? {
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
 
+//        val searchIcon = ResourcesCompat.getDrawable(context?.resources!!, R.drawable.ic_search,null)
+//
 //        when (context?.resources?.configuration?.uiMode?.and(Configuration.UI_MODE_NIGHT_MASK)) {
-//            Configuration.UI_MODE_NIGHT_YES -> {binding.menu = Color.WHITE}
-//            Configuration.UI_MODE_NIGHT_NO -> {color = Color.BLACK}
-//            Configuration.UI_MODE_NIGHT_UNDEFINED -> { Color.RED}
+//            Configuration.UI_MODE_NIGHT_YES -> {searchIcon?.setTint(Color.WHITE)}
+//            Configuration.UI_MODE_NIGHT_NO -> {searchIcon?.setTint(R.color.teal_200)}
+//            Configuration.UI_MODE_NIGHT_UNDEFINED -> { searchIcon?.setTint(R.color.teal_200)}
 //        }
 
         viewModel = ViewModelProvider(this)[GalleryViewModel::class.java]
@@ -53,6 +56,10 @@ class GalleryFragment : Fragment() {
                 }
             }
         })
+
+        binding.tvError.setOnClickListener {
+            adapter.retry()
+        }
 
         viewModel.images.observe(viewLifecycleOwner, Observer {
             adapter.submitData(viewLifecycleOwner.lifecycle, it)
@@ -71,7 +78,7 @@ class GalleryFragment : Fragment() {
                 }else {
                     tvNoQuery.isVisible = false
                 }
-                if (loadState.source.refresh is LoadState.NotLoading && loadState.append.endOfPaginationReached && adapter.itemCount < 1 && searchCounter < 0){
+                if (loadState.source.refresh is LoadState.NotLoading && loadState.append.endOfPaginationReached && adapter.itemCount < 1 && searchCounter > 0){
                     rvGallery.isVisible = false
                     tvNoResults.isVisible = true
                 }else{
@@ -88,6 +95,7 @@ class GalleryFragment : Fragment() {
     private fun initializesRecyclerView() : UnsplashImageAdapter{
         val adapter = UnsplashImageAdapter()
         binding.rvGallery.setHasFixedSize(true)
+        binding.rvGallery.itemAnimator = null
         binding.rvGallery.adapter = adapter.withLoadStateHeaderAndFooter(
             header = UnsplashImageLoadStateAdapter { adapter.retry() },
             footer = UnsplashImageLoadStateAdapter { adapter.retry() }
