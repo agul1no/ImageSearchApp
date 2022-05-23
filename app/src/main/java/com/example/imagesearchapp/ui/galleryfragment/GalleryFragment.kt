@@ -33,6 +33,7 @@ class GalleryFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         _binding = FragmentGalleryBinding.inflate(inflater, container, false)
 
 //        val searchIcon = ResourcesCompat.getDrawable(context?.resources!!, R.drawable.ic_search,null)
