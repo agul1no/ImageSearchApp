@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="8dp">
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -20,7 +21,7 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:focusable="true"
-        android:text="Results could not be loaded \n Click here to load again"
+        android:text="Results could not be loaded \n Click here to reload"
         android:textAlignment="center"
         android:textColor="?attr/colorSecondary"
         android:textSize="18sp"

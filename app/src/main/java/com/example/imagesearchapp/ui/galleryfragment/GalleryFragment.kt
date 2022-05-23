@@ -39,7 +39,10 @@ class GalleryFragment : Fragment() {
     private fun initializesRecyclerView() : UnsplashImageAdapter{
         val adapter = UnsplashImageAdapter()
         binding.rvGallery.setHasFixedSize(true)
-        binding.rvGallery.adapter = adapter
+        binding.rvGallery.adapter = adapter.withLoadStateHeaderAndFooter(
+            header = UnsplashImageLoadStateAdapter { adapter.retry() },
+            footer = UnsplashImageLoadStateAdapter { adapter.retry() }
+        )
         return adapter
     }
 
