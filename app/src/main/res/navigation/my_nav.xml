@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/galleryFragment"
         android:name="com.example.imagesearchapp.ui.galleryfragment.GalleryFragment"
-        android:label="fragment_gallery"
+        android:label="Gallery"
         tools:layout="@layout/fragment_gallery" />
 </navigation>

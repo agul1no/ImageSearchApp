@@ -19,22 +19,26 @@ X
 LICENSE,0\3\0398ccd0f49298b10a3d76a47800d2ebecd49859
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-A
-gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-k
-;app/src/main/java/com/example/imagesearchapp/util/ApiKey.kt,9\f\9f0f61bae0a34b9e5eac6745d28949ef57fc135e
-x
-Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65
 w
 Gapp/src/main/java/com/example/imagesearchapp/data/model/ProfileImage.kt,f\8\f87d525414ff1f4eba9f9892e44c0697867fd1bc
 |
 Lapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashImageUrls.kt,d\1\d1735dac3b1e39ae69eda2fa12bb40d7c545209c
 w
 Gapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashUser.kt,3\a\3acebd41fdc9292b6b3bae73bac9582defc49338
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 €
 Papp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashResponse.kt,e\e\ee4765c1f4fafac0bdb8b294efb9cf04d07034ec
+k
+;app/src/main/java/com/example/imagesearchapp/util/ApiKey.kt,9\f\9f0f61bae0a34b9e5eac6745d28949ef57fc135e
+v
+Fapp/src/main/java/com/example/imagesearchapp/ImageSearchApplication.kt,5\7\576457ecb77cfebc007daf726714ccffd6795a4a
 {
 Kapp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashApi.kt,7\1\7111ff1c9f685ce2a28676be48f7826031dcd7c9
