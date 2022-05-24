@@ -13,11 +13,14 @@
         <action
             android:id="@+id/action_galleryFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <argument
+            android:name="photo"
+            app:argType="com.example.imagesearchapp.data.model.UnsplashImage" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.imagesearchapp.DetailFragment"
-        android:label="fragment_detail"
+        android:name="com.example.imagesearchapp.ui.detailfragment.DetailFragment"
+        android:label="Details"
         tools:layout="@layout/fragment_detail" >
         <action
             android:id="@+id/action_detailFragment_to_galleryFragment"

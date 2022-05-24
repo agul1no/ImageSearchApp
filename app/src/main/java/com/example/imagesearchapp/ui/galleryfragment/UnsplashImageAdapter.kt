@@ -41,9 +41,6 @@ class UnsplashImageAdapter (private val listener: OnRecyclerViewItemClickListene
                         listener.onItemClick(item)
                     }
                 }
-
-
-
             }
         }
 

@@ -1,13 +1,10 @@
 package com.example.imagesearchapp.ui.galleryfragment
 
 import android.content.Context
-import android.content.res.Configuration
-import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.widget.SearchView
-import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
