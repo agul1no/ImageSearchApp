@@ -10,8 +10,9 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.imagesearchapp.R
 import com.example.imagesearchapp.data.model.UnsplashImage
 import com.example.imagesearchapp.databinding.ItemUnsplashImageBinding
+import com.example.imagesearchapp.util.OnRecyclerViewItemClickListener
 
-class UnsplashImageAdapter : PagingDataAdapter<UnsplashImage, UnsplashImageAdapter.ImageViewHolder>(IMAGE_COMPARATOR) {
+class UnsplashImageAdapter (private val listener: OnRecyclerViewItemClickListener) : PagingDataAdapter<UnsplashImage, UnsplashImageAdapter.ImageViewHolder>(IMAGE_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
         val binding = ItemUnsplashImageBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -27,12 +28,21 @@ class UnsplashImageAdapter : PagingDataAdapter<UnsplashImage, UnsplashImageAdapt
         }
     }
 
-    class ImageViewHolder(
+    inner class ImageViewHolder(
         private val binding: ItemUnsplashImageBinding
         ) : RecyclerView.ViewHolder(binding.root){
 
         init {
             binding.root.setOnClickListener {
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION){
+                    val item = getItem(position)
+                    if (item != null){
+                        listener.onItemClick(item)
+                    }
+                }
+
+
 
             }
         }
