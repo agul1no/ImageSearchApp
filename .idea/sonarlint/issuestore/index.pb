@@ -50,3 +50,5 @@ x
 Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65
 †
 Vapp/src/main/java/com/example/imagesearchapp/data/pagingsource/UnsplashPagingSource.kt,f\f\ffac33d23eeaae93d3abf77be48fe0d152352788
+ƒ
+Sapp/src/main/java/com/example/imagesearchapp/ui/galleryfragment/GalleryViewModel.kt,8\4\84d1040c6c79d6b8dc9e717ca11f65e7bf1980c9

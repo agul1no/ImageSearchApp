@@ -114,24 +114,27 @@ class GalleryFragment : Fragment() {
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query?.isEmpty() == true){
-                    binding.rvGallery.isVisible = false
-                    binding.tvNoQuery.isVisible = true
-                }
-                if (query?.isNotEmpty() == true){
-                    binding.rvGallery.scrollToPosition(0)
-                    viewModel.searchImages(query.toString())
-                    binding.tvNoQuery.isVisible = false
-                    searchView.clearFocus()
-                }
-                searchCounter++
+                checkQueryIsEmpty(query, searchView)
                 return true
             }
             override fun onQueryTextChange(query: String?): Boolean {
                 return true
             }
-
         })
+    }
+
+    private fun checkQueryIsEmpty(query: String?, searchView: SearchView){
+        if (query?.isEmpty() == true){
+            binding.rvGallery.isVisible = false
+            binding.tvNoQuery.isVisible = true
+        }
+        if (query?.isNotEmpty() == true){
+            binding.rvGallery.scrollToPosition(0)
+            viewModel.searchImages(query.toString())
+            binding.tvNoQuery.isVisible = false
+            searchView.clearFocus()
+        }
+        searchCounter++
     }
 
     fun View.hideKeyboard() {
