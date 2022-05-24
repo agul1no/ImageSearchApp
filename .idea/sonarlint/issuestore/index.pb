@@ -22,12 +22,6 @@ X
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-w
-Gapp/src/main/java/com/example/imagesearchapp/data/model/ProfileImage.kt,f\8\f87d525414ff1f4eba9f9892e44c0697867fd1bc
-|
-Lapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashImageUrls.kt,d\1\d1735dac3b1e39ae69eda2fa12bb40d7c545209c
-w
-Gapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashUser.kt,3\a\3acebd41fdc9292b6b3bae73bac9582defc49338
 <
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 @
@@ -46,9 +40,5 @@ A
 gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
 s
 Capp/src/main/java/com/example/imagesearchapp/di/module/AppModule.kt,6\d\6d0efaa49b281c6a58d5405b197e7f931e8cbffc
-x
-Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65
-†
-Vapp/src/main/java/com/example/imagesearchapp/data/pagingsource/UnsplashPagingSource.kt,f\f\ffac33d23eeaae93d3abf77be48fe0d152352788
 ƒ
 Sapp/src/main/java/com/example/imagesearchapp/ui/galleryfragment/GalleryViewModel.kt,8\4\84d1040c6c79d6b8dc9e717ca11f65e7bf1980c9

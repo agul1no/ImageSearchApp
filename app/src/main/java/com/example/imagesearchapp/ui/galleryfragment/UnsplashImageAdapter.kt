@@ -31,6 +31,12 @@ class UnsplashImageAdapter : PagingDataAdapter<UnsplashImage, UnsplashImageAdapt
         private val binding: ItemUnsplashImageBinding
         ) : RecyclerView.ViewHolder(binding.root){
 
+        init {
+            binding.root.setOnClickListener {
+
+            }
+        }
+
             fun bind(image: UnsplashImage){
                 binding.apply {
                     Glide.with(itemView)
