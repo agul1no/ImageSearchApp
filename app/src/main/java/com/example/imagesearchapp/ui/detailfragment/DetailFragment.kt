@@ -1,9 +1,12 @@
 package com.example.imagesearchapp.ui.detailfragment
 
+import android.app.DownloadManager
+import android.content.Context
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Bundle
+import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,7 +19,11 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.imagesearchapp.R
+import com.example.imagesearchapp.data.model.UnsplashImage
 import com.example.imagesearchapp.databinding.FragmentDetailBinding
+import com.example.imagesearchapp.util.DateFormatter.Companion.dateFormatterDownload
+import com.example.imagesearchapp.util.OnDownloadClickListener
+import java.util.*
 
 class DetailFragment : Fragment() {
 
@@ -75,6 +82,20 @@ class DetailFragment : Fragment() {
                     context.startActivity(intent)
                 }
                 paint.isUnderlineText = true
+            }
+
+            downloadButton.setOnClickListener {
+                val timeInMillis = Calendar.getInstance().timeInMillis
+                val url = photo.urls.regular
+                val request = DownloadManager.Request(Uri.parse(url))
+                    .setTitle("Image_${timeInMillis.dateFormatterDownload()}")
+                    .setDescription(photo.description.toString())
+                    .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "Image_${timeInMillis.dateFormatterDownload()}.jpg")
+                    .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+                    .setAllowedOverMetered(true)
+
+                val downloadManager = activity?.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+                downloadManager.enqueue(request)
             }
         }
 

@@ -35,7 +35,6 @@ class UnsplashPagingSource (
     }
 
     override fun getRefreshKey(state: PagingState<Int, UnsplashImage>): Int? {
-        // not implemented on purpose cause don't needed
         return state.anchorPosition
     }
 }
