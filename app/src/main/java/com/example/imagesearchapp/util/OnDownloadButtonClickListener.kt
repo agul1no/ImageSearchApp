@@ -2,7 +2,7 @@ package com.example.imagesearchapp.util
 
 import com.example.imagesearchapp.data.model.UnsplashImage
 
-interface OnDownloadClickListener {
+interface OnDownloadButtonClickListener {
 
     fun onDownloadButtonClick(image: UnsplashImage)
 }

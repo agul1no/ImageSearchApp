@@ -19,13 +19,13 @@ import com.example.imagesearchapp.R
 import com.example.imagesearchapp.data.model.UnsplashImage
 import com.example.imagesearchapp.databinding.FragmentGalleryBinding
 import com.example.imagesearchapp.util.DateFormatter.Companion.dateFormatterDownload
-import com.example.imagesearchapp.util.OnDownloadClickListener
+import com.example.imagesearchapp.util.OnDownloadButtonClickListener
 import com.example.imagesearchapp.util.OnRecyclerViewItemClickListener
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
 
 @AndroidEntryPoint
-class GalleryFragment : Fragment(), OnRecyclerViewItemClickListener, OnDownloadClickListener {
+class GalleryFragment : Fragment(), OnRecyclerViewItemClickListener, OnDownloadButtonClickListener {
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!

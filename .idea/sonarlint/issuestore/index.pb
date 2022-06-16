@@ -50,3 +50,11 @@ Rapp/src/main/java/com/example/imagesearchapp/data/repository/UnsplashRepository
 Kapp/src/main/java/com/example/imagesearchapp/data/remote/api/UnsplashApi.kt,7\1\7111ff1c9f685ce2a28676be48f7826031dcd7c9
 s
 Capp/src/main/java/com/example/imagesearchapp/di/module/AppModule.kt,6\d\6d0efaa49b281c6a58d5405b197e7f931e8cbffc
+|
+Lapp/src/main/java/com/example/imagesearchapp/data/model/UnsplashImageUrls.kt,d\1\d1735dac3b1e39ae69eda2fa12bb40d7c545209c
+x
+Happ/src/main/java/com/example/imagesearchapp/data/model/UnsplashImage.kt,1\5\1556e30d42540ea4cacbf746eab7d028db04cf65
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+†
+Vapp/src/main/java/com/example/imagesearchapp/data/pagingsource/UnsplashPagingSource.kt,f\f\ffac33d23eeaae93d3abf77be48fe0d152352788

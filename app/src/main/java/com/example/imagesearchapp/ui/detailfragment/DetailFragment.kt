@@ -19,10 +19,8 @@ import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.imagesearchapp.R
-import com.example.imagesearchapp.data.model.UnsplashImage
 import com.example.imagesearchapp.databinding.FragmentDetailBinding
 import com.example.imagesearchapp.util.DateFormatter.Companion.dateFormatterDownload
-import com.example.imagesearchapp.util.OnDownloadClickListener
 import java.util.*
 
 class DetailFragment : Fragment() {
